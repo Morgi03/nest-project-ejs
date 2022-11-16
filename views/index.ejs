@@ -1,10 +1,26 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8" />
     <title>App</title>
-  </head>
-  <body>
-    <%= message %>
-  </body>
+</head>
+
+<body>
+    <%- include('header') -%>
+        <h2>
+            <%= message %>
+        </h2>
+        <p>Az életkorod: <%= age%>.</p>
+        <p>
+            <%if(age>=18) { %>
+                Felnőtt
+                <% } else { %>
+                    Gyerek
+                    <% } %>
+        </p>
+        <p>Az oldalt készítette: <%= name %>
+        </p>
+</body>
+
 </html>

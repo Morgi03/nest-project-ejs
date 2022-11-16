@@ -4,7 +4,7 @@ import { Get, Controller, Render } from '@nestjs/common';
 export class AppController {
   @Get()
   @Render('index')
-  root(): { message: string } {
-    return { message: 'Hello World!' };
+  root(): { message: string; age: number; name: string } {
+    return { message: 'Hello World!', age: 17, name: 'Morgi03' };
   }
 }
