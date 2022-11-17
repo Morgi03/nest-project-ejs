@@ -22,8 +22,8 @@
         <p>Az oldalt készítette: <%= name %>
         </p>
         <p>
-
-            <% switch (<% rand %>) {
+            A random szám értéke: <%= rand %> <br>
+            <% switch (rand) {
                 case 1: %>
             Január
               <% break;
@@ -63,6 +63,25 @@
                 default: %>
                 nincs ilyen hónap
                <% break; } %>
+               </p>
+
+               <p>
+                Az első random értéke: <%= rand1 %> <br>
+                A második random értéke: <%= rand2 %> <br>
+               <% if(rand1 > rand2) { %>
+               <% randValues = rand1 %>
+                 <% for (let i = 0; i < rand1-rand2; i++) { %>
+                    <%= randValues %>
+                   <% randValues-- %>  
+               <% } %>
+               <% } else { %>
+                <% randValues = rand2 %>
+                  <% for (let i = 0; i < rand2-rand1; i++) { %>
+                     <%= randValues %>
+                    <% randValues-- %>  
+                <% } %>
+                <% } %>
+               </p>
 </body>
 
 </html>
